@@ -100,8 +100,9 @@ for(i = 0;i<countLife;i++){
 
   };
   loop();
-  canvas.addEventListener("click",function(event){
-    if(event.x-25>=paddle.x){
+  canvas.addEventListener("touchstart",function(event){
+    var x = event.touches[0].clientX
+    if(x-25>=paddle.x){
       right();
     }
     else {
